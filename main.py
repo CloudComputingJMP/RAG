@@ -1,6 +1,4 @@
 import os
-
-
 from fastapi import FastAPI
 import uvicorn
 from google.cloud import aiplatform
