@@ -4,6 +4,12 @@ import uvicorn
 from google.cloud import aiplatform
 from vertexai.language_models import TextEmbeddingModel
 from pydantic import BaseModel
+from google.auth import default
+
+credentials, project = default()
+print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+print(f"Authenticated as: {credentials.service_account_email}")
+print(f"Project: {project}")
 
 
 class QueryModel(BaseModel):
